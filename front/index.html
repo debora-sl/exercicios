@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--ng = angular-->
+<html lang="pt-BR" ng-app='meuApp'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Full Stack</title>
+
+    <!-- Linkando o css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Linkando o angular -->
+     <script src="node_modules/angular/angular.js"></script>
+
+    <!-- Linkando o angular routes -->
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+
+
+    <!-- Linkando os scripts -->
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+
+    <!-- Linkando os controllers -->
+    <script src="app/controllers/controller.js"></script>
+
+</head>
+<body>
+    <header ng-include="'app/views/partials/header.html'"></header>
+
+    <div class="container">
+        <nav ng-include="'app/views/partials/sidebar.html'"></nav>
+        <!--Exibindo as views -->
+        <div ng-views class="main-content"></div>
+
+    </div>
+
+    <footer ng-include="'app/views/partials/footer.html'"></footer>
+</body>
+</html>
