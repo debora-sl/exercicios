@@ -1,0 +1,17 @@
+
+
+<div class="content">
+    <div class="main-content">
+        <p>{{informacoes}}</p>
+        <p>Nome: {{informacoesComMaisDados.nome}}</p>
+        <p>Sobrenome: {{informacoesComMaisDados.sobrenome}}</p>
+        <p>Sobrenome e Nome: {{informacoesComMaisDados.sobrenome + ' ' + informacoesComMaisDados.nome}}</p>
+
+        <!-- Botão para chamar a função que troca de nome -->
+        <input type="button" value="Trocar sobrenome" ng-click="trocarNome()">
+
+        <p>Sobrenome atualizado: {{informacoesComMaisDados.sobrenome}}</p>
+
+    </div>
+</div>
+

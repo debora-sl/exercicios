@@ -7,7 +7,7 @@
     <title>Curso Full Stack</title>
 
     <!-- Linkando o css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Linkando o angular -->
      <script src="node_modules/angular/angular.js"></script>
@@ -22,18 +22,12 @@
 
     <!-- Linkando os controllers -->
     <script src="app/controllers/controller.js"></script>
+    <script src="app/controllers/TrocarNomesController.js"></script>
+    <script src="app/controllers/CalculadoraController.js"></script>
 
 </head>
 <body>
-    <header ng-include="'app/views/partials/header.html'"></header>
-
-    <div class="container">
-        <nav ng-include="'app/views/partials/sidebar.html'"></nav>
-        <!--Exibindo as views -->
-        <div ng-views class="main-content"></div>
-
-    </div>
-
-    <footer ng-include="'app/views/partials/footer.html'"></footer>
+    <!-- Aqui é ponto de entrada para os estados -->
+    <div ui-view></div>
 </body>
 </html>

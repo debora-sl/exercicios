@@ -59,6 +59,13 @@ body {
 .main-container {
     display: flex;
     margin-top: 20px;
+    /* border: thin solid red; */
+    margin-left: 300px;
+}
+
+/* Titulos das subpáginas */
+.sub-paginas-titulos{
+    margin-left: 400px;
 }
 
 /* Sidebar Menu */
@@ -69,7 +76,7 @@ body {
     height: calc(100vh - 70px); /* Altura da sidebar ajustada para excluir o header */
     padding: 20px;
     position: fixed;
-    top: 60px; /* Para manter a sidebar abaixo do header */
+    top: 58px; /* Para manter a sidebar abaixo do header */
 }
 
 .sidebar ul {

@@ -1,0 +1,18 @@
+
+
+<div class="content">
+    <div class="main-content">
+        <h3 class="sub-paginas-titulos">Calculadora</h3>
+
+        <div>
+            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+            <input type="number" ng-model="valores.primeiroNumero"><br><br> 
+            <input type="number" ng-model="valores.segundoNumero"><br><br> 
+        </div>
+
+        <input type="button" value="Calcular" ng-click="somar()"> <br><br>
+
+        <p>Resultado: {{valores.resultado}}</p>
+
+    </div>
+</div>
