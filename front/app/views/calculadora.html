@@ -10,7 +10,12 @@
             <input type="number" ng-model="valores.segundoNumero"><br><br> 
         </div>
 
-        <input type="button" value="Calcular" ng-click="somar()"> <br><br>
+        <input type="button" value="Somar" ng-click="somar()"> 
+        <input type="button" value="Subtrair" ng-click="subtrair()"> 
+        <input type="button" value="Multiplicar" ng-click="multiplicar()"> 
+        <input type="button" value="Dividir" ng-click="dividir()"> 
+        <input type="button" value="CarcularTudo" ng-click="carcularTudo()"> 
+        <input type="button" value="Limpar" ng-click="limpar()" style="background-color: red; color: antiquewhite;"> 
 
         <p>Resultado: {{valores.resultado}}</p>
 
