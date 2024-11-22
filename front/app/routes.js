@@ -25,6 +25,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/calculadora.html', // Template da calculadora
             controller: 'CalculadoraController' // Controller para da calculadora
         })
+        .state('main.contador', {
+            url: '/contador',
+            templateUrl: 'app/views/contador.html', // Template do contador
+            controller: 'ContadorController' // Controller para do contador
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',
