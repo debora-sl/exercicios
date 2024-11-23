@@ -1,0 +1,17 @@
+<div class="content">
+    <div class="main-content">
+        <h3 class="sub-paginas-titulos">Calculadora IMC</h3>
+
+        <div>
+            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+             <p>Peso</p>
+            <input type="number" ng-model="dadosPessoa.peso"><br><br>
+            <p>Altura</p>
+            <input type="number" ng-model="dadosPessoa.altura"><br><br> 
+        </div>
+
+        <input type="button" value="Calcular IMC" ng-click="calcularIMC()"> 
+
+        <p>IMC: {{imcCalculado}}</p>
+    </div>
+</div>

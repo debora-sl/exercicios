@@ -30,6 +30,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/contador.html', // Template do contador
             controller: 'ContadorController' // Controller para do contador
         })
+        .state('main.calculadoraImc', {
+            url: '/calculadoraImc',
+            templateUrl: 'app/views/calculadoraImc.html', // Template da Calculadora Imc
+            controller: 'CalculadoraImcController' // Controller para da Calculadora Imc
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',
