@@ -35,6 +35,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/calculadoraImc.html', // Template da Calculadora Imc
             controller: 'CalculadoraImcController' // Controller para da Calculadora Imc
         })
+        .state('main.calculadoraIdade', {
+            url: '/calculadoraIdade',
+            templateUrl: 'app/views/calculadoraIdade.html', // Template da Calculadora de Idade
+            controller: 'CalculadoraIdadeController' // Controller para da Calculadora de Idade
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',

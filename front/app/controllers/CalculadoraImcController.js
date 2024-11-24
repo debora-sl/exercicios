@@ -41,9 +41,7 @@ angular.module('meuApp')
             $scope.classificacao = `com IMC de ${$scope.imcCalculado}, você tem indice de: ${$scope.classificacoes.obesidadeGrauIII}` 
         }else if($scope.imcCalculado < 10){
             $scope.classificacao = `com IMC de ${$scope.imcCalculado}, você tem indice de: Não foi possível calcular` 
-        }
-
-        
+        }    
     }
 
 });
