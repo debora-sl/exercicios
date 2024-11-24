@@ -1,0 +1,16 @@
+<div class="content">
+    <div class="main-content">
+        <h3 class="sub-paginas-titulos">Calculadora de Idade</h3>
+
+        <div>
+            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+             <p>Data de Nascimento</p>
+            <input type="date" ng-model="informacoes.dataDeNascimento"><br><br>
+        </div>
+
+        <input type="button" value="Calcular Idade" ng-click="calcularIdade()"> 
+
+        <p>{{informacoes.dataDeNascimento}}</p>
+
+    </div>
+</div>
