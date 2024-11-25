@@ -45,6 +45,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/palindromo.html', // Template da Calculadora de Idade
             controller: 'PalindromoController' // Controller para da Calculadora de Idade
         })
+        .state('main.conversorDeUnidade', {
+            url: '/conversorDeUnidade',
+            templateUrl: 'app/views/conversorDeUnidade.html', // Template da Calculadora de Idade
+            controller: 'ConversorDeUnidadeController' // Controller para da Calculadora de Idade
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',

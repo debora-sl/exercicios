@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="main-content">
+        <h3 class="sub-paginas-titulos">Conversor de Unidade</h3> 
+
+        <div>
+            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+             <!-- Metro, Centrimeto e Milimetro -->
+             <p>Valor</p>
+             <input type="number" ng-model="comprimentos.valor" ng-change="converter()"><br><br> <!-- ng-change='' é para atulizar os campos -->
+
+        </div>
+
+        <input type="button" value="Converter" ng-click="converter()"> <br><br>
+
+        <p>Conversões:</p>
+        <p>{{resultadoMilimetroPorCentrimetro}}</p>
+        <p>{{resultadoMilimetroPorMetro}}</p>
+        <p>{{resultadoCentimetroPorMilimetro}}</p>
+        <p>{{resultadoCentimetroPorMetro}}</p>
+        <p>{{resultadoMetroPorMilimetro}}</p>
+        <p>{{resultadoMetroPorCentrimetro}}</p>
+
+        
+</div>
