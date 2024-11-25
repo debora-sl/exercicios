@@ -4,13 +4,30 @@
 
         <div>
             <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
-             <p>Data de Nascimento</p>
+             <p>Nome:</p>
+             <input type="text" ng-model="informacoes.nome"><br><br>
+             <p>Data de Nascimento:</p>
             <input type="date" ng-model="informacoes.dataDeNascimento"><br><br>
         </div>
 
-        <input type="button" value="Calcular Idade" ng-click="calcularIdade()"> 
+        <input type="button" value="Calcular Idade" ng-click="calcularIdade()"> <br>
 
-        <p>{{informacoes.dataDeNascimento}}</p>
+       <!-- <p>{{pessoas}}</p> -->
 
+        <br>
+        <table border="1">
+            <thead>
+                <th>Nome</th>
+                <th>Nascimento</th>
+                <th>Idade Calculada</th>
+            </thead>
+            <tbody ng-repeat="item in pessoas">
+                <tr>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.dataDeNascimento | date:'dd/MM/yyyy'}}</td>  <!-- | date:'' formatando a data, tbm tem currency p/ moedas -->
+                    <td>{{item.idadeCalculada}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
