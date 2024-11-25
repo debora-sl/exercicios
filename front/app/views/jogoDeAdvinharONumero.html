@@ -1,0 +1,33 @@
+<div class="content">
+    <div class="main-content">
+        <h3 class="sub-paginas-titulos">Jogo de Advinhar o Número</h3> 
+
+        <div>
+            <h4>Configure o jogo</h4> <br>
+
+            <p>Minimo de Tentativas</p>
+            <input type="number" ng-model="configuracao.minimo"> <br><br>
+
+            <p>Maximo</p>
+            <input type="number" ng-model="configuracao.maximo"> <br><br>
+
+            <input type="button" value="Iniciar" ng-click="iniciarJogo()"> <br><br><br>
+            {{mensagemDeErroDoJogo}}
+
+        </div>
+
+        <div>
+            <h4>Jogo começou...</h4> <br>
+
+            <p>Chute</p>
+            <input type="number" ng-model="jogo.tentativa"> <br><br>
+        </div>
+
+        <input type="button" value="Tentar" ng-click="testar()">
+
+        {{mensagem}}
+
+
+    <div>
+
+</div>

@@ -42,13 +42,18 @@ angular.module('meuApp', ['ui.router'])
         })
         .state('main.palindromo', {
             url: '/palindromo',
-            templateUrl: 'app/views/palindromo.html', // Template da Calculadora de Idade
-            controller: 'PalindromoController' // Controller para da Calculadora de Idade
+            templateUrl: 'app/views/palindromo.html', // Template Palindromo
+            controller: 'PalindromoController' // Controller para Palindromo
         })
         .state('main.conversorDeUnidade', {
             url: '/conversorDeUnidade',
-            templateUrl: 'app/views/conversorDeUnidade.html', // Template da Calculadora de Idade
-            controller: 'ConversorDeUnidadeController' // Controller para da Calculadora de Idade
+            templateUrl: 'app/views/conversorDeUnidade.html', // Template Conversor de Unidades
+            controller: 'ConversorDeUnidadeController' // Controller para Conversor de Unidades
+        })
+        .state('main.jogoDeAdvinharONumero', {
+            url: '/jogoDeAdvinharONumero',
+            templateUrl: 'app/views/jogoDeAdvinharONumero.html', // Template Jogo de Advinhar o Número
+            controller: 'JogoDeAdvinharONumeroController' // Controller para Jogo de Advinhar o Número
         })
 
        /* .state('main.dashboard', {
