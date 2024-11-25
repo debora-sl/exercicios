@@ -40,6 +40,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/calculadoraIdade.html', // Template da Calculadora de Idade
             controller: 'CalculadoraIdadeController' // Controller para da Calculadora de Idade
         })
+        .state('main.palindromo', {
+            url: '/palindromo',
+            templateUrl: 'app/views/palindromo.html', // Template da Calculadora de Idade
+            controller: 'PalindromoController' // Controller para da Calculadora de Idade
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',
