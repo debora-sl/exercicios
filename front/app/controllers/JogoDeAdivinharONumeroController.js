@@ -1,6 +1,6 @@
 // $scope é para comunicação entre JS e HTML
 angular.module('meuApp')
-.controller('JogoDeAdvinharONumeroController', function($scope) {
+.controller('JogoDeAdivinharONumeroController', function($scope) {
     console.log("Jogo funcionando")
 
     $scope.mensagem = '';

@@ -50,10 +50,10 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/conversorDeUnidade.html', // Template Conversor de Unidades
             controller: 'ConversorDeUnidadeController' // Controller para Conversor de Unidades
         })
-        .state('main.jogoDeAdvinharONumero', {
-            url: '/jogoDeAdvinharONumero',
-            templateUrl: 'app/views/jogoDeAdvinharONumero.html', // Template Jogo de Advinhar o Número
-            controller: 'JogoDeAdvinharONumeroController' // Controller para Jogo de Advinhar o Número
+        .state('main.jogoDeAdivinharONumero', {
+            url: '/jogoDeAdivinharONumero',
+            templateUrl: 'app/views/jogoDeAdivinharONumero.html', // Template Jogo de Adivinhar o Número
+            controller: 'JogoDeAdivinharONumeroController' // Controller para Jogo de Adivinhar o Número
         })
 
        /* .state('main.dashboard', {
