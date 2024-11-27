@@ -55,6 +55,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/jogoDeAdivinharONumero.html', // Template Jogo de Adivinhar o Número
             controller: 'JogoDeAdivinharONumeroController' // Controller para Jogo de Adivinhar o Número
         })
+        .state('main.jogoDeAdivinharAPalavra', {
+            url: '/jogoDeAdivinharAPalavra',
+            templateUrl: 'app/views/jogoDeAdivinharAPalavra.html', // Template Jogo de Adivinhar a Palavra
+            controller: 'JogoDeAdivinharAPalavraController' // Controller para Jogo de Adivinhar a Palavra
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',
