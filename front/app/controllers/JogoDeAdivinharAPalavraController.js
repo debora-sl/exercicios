@@ -4,7 +4,8 @@ angular.module('meuApp')
     console.log("Jogo funcionando")
 
     $scope.jogo = {
-        palavraTentada: ''
+        palavraTentada: '',
+        palavraAleatoria: ''
     }
 
     $scope.iniciarJogo = function(){
