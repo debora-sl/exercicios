@@ -15,7 +15,7 @@ angular.module('meuApp')
         'abacaxi', 'banana', 'laranja', 'morango', 'coco',
         'melancia', 'pessego', 'uva', 'pera',
         'ameixa', 'kiwi', 'manga', 'framboesa', 'limao',
-        'tangerina', 'cereja', 'amora', 'maracuja', 'goiaba'
+        'tangerina', 'cereja', 'amora', 'maracuja', 'goiaba', 'carambola'
     ];
 
     $palavraAleatoria= '';
