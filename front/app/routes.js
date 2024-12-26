@@ -60,6 +60,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/jogoDeAdivinharAPalavra.html', // Template Jogo de Adivinhar a Palavra
             controller: 'JogoDeAdivinharAPalavraController' // Controller para Jogo de Adivinhar a Palavra
         })
+        .state('main.calculadoraComApi', {
+            url: '/calculadoraComApi',
+            templateUrl: 'app/views/exerciciosComApi/calculadoraComApi.html', // Template da calculadora
+            controller: 'CalculadoraComApiController' // Controller para da calculadora
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',
