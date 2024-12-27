@@ -65,6 +65,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exerciciosComApi/calculadoraComApi.html', // Template da calculadora
             controller: 'CalculadoraComApiController' // Controller para da calculadora
         })
+        .state('main.agenda', {
+            url: '/agenda',
+            templateUrl: 'app/views/exerciciosComApi/agenda.html', // Template da agenda
+            controller: 'AgendaController' // Controller para agenda
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',

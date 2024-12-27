@@ -1,0 +1,69 @@
+
+
+<!-- form.html -->
+<div class="main-container">
+    <div class="dashboard-content-form">
+        <h2>Gerenciar Contatos</h2>
+        
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" ng-model="informacoesDosContatos.nome" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" ng-model="informacoesDosContatos.email" placeholder="exemplo@exemplo.com">
+            </div>
+            <div class="form-group">
+                <label for="telefoneCelular">Telefone Celular</label>
+                <input type="text" ng-model="informacoesDosContatos.telefoneCelular" placeholder="XXXXXXXXXXX">
+            </div>
+            <div class="form-group">
+                <label for="telefoneFixo">Telefone Fixo</label>
+                <input type="text" ng-model="informacoesDosContatos.telefoneFixo" placeholder="XXXXXXXXXX">
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" ng-model="informacoesDosContatos.endereco" placeholder="Rua Exemplo, 000, Exemplês, EX">
+            </div>
+            
+            <div class="form-buttons">
+                <input type="button" value="Adicionar ou Editar (caso consulte)" ng-click="cadastrarContato()">
+                <input type="button" value="Cancelar">
+
+            </div>
+        </form>
+
+        <div class="contact-list">
+            <h3>Contatos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Celular</th>
+                        <th>Telefone Fixo</th>
+                        <th>Endereço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <!-- ng-repeat irá imprimir os itens do array contatos -->
+                <tbody ng-repeat="item in contatos">
+                    <!-- Os contatos serão listados aqui -->
+                    <tr>
+                        <td>{{item.nome}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.telefoneCelular}}</td>
+                        <td>{{item.telefoneFixo}}</td>
+                        <td>{{item.endereco}}</td>
+                        <td>
+                            <input type="button" value="Editar">
+                            <input type="button" value="Excluir">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -60,7 +60,7 @@ body {
     display: flex;
     margin-top: 20px;
     /* border: thin solid red; */
-    margin-left: 300px;
+    margin-left: 120px;
 }
 
 /* Titulos das subpáginas */
@@ -107,6 +107,15 @@ body {
     margin-left: 300px; /* Espaço para a sidebar */
     background-color: white;
     height: calc(100vh - 70px); /* Ajustando a altura da área de conteúdo */
+}
+
+.dashboard-content-form {
+    flex-grow: 1;
+    padding: 30px;
+    margin-left: 80px; /* Espaço para a sidebar */
+    background-color: white;
+    height: calc(100vh - 70px); /* Ajustando a altura da área de conteúdo */
+    border: thin solid red;
 }
 
 .dashboard-content h2 {
