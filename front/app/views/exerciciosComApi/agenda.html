@@ -59,7 +59,7 @@
                         <td>{{item.endereco}}</td>
                         <td>
                             <input type="button" value="Editar">
-                            <input type="button" value="Excluir">
+                            <input type="button" value="Excluir" ng-click="$parent.deleletarContato(item.id)">
                         </td>
                     </tr>
                 </tbody>

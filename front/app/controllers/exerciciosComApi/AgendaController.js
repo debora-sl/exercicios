@@ -75,4 +75,22 @@ angular.module('meuApp')
             $scope.dadosDosContatos = error.data; 
         }) 
     } 
+
+    // criando a função que exclui o contato
+    $scope.deleletarContato = function(id){
+
+        /* Para debugar
+        console.log('Botão deletar, fui clicado!');
+        console.log(id);
+        */
+
+        $url = 'http://localhost:8000/api/agenda/deletar/' + id;
+
+        $http.delete($url).then(function(response){
+            console.log(response);
+        }, function(error){
+            console.log('Erro, contato não apagado!', error);
+        });
+        
+    };
 });
