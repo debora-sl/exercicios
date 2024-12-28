@@ -4,6 +4,11 @@
 <div class="main-container">
     <div class="dashboard-content-form">
         <h2>Gerenciar Contatos</h2>
+        <div>
+            <h3 ng-show="status == 'criando'">Criar - Novo Contato</h3>
+            <h3 ng-show="status == 'editando'">Editar - Contato #{{informacoesDosContatos.id}}</h3>
+        </div>
+
         
         <form class="contact-form">
             <div class="form-group">
@@ -28,10 +33,11 @@
             </div>
             
             <div class="form-buttons">
-                <input type="button" value="Adicionar ou Editar (caso consulte)" ng-click="cadastrarContato()">
-                <input type="button" value="Cancelar">
-
+                <input type="button" value="Adicionar" ng-show="status == 'criando'"  ng-click="cadastrarContato()">
+                <input type="button" value="Editar" ng-show="status == 'editando'" ng-click="editarSalvar()">
             </div>
+
+            <input type="button" value="Cancelar" id="btnCancelar" ng-click="resetar()">
         </form>
 
         <div class="contact-list">
@@ -58,10 +64,18 @@
                         <td>{{item.telefoneFixo}}</td>
                         <td>{{item.endereco}}</td>
                         <td>
-                            <input type="button" value="Editar">
+                            <input type="button" value="Editar" ng-click="editarContato(item.id)">
                             <input type="button" value="Excluir" ng-click="$parent.deleletarContato(item.id)">
                         </td>
                     </tr>
+                </tbody>
+                <tbody ng-show="contatos.length == 0">
+                    <tr>
+                        <td colspan="6">
+                            Não existem contatos cadastrados.
+                        </td>
+                    </tr>
+
                 </tbody>
             </table>
         </div>
