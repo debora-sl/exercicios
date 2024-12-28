@@ -1,83 +1,91 @@
 
 
 <!-- form.html -->
-<div class="main-container">
-    <div class="dashboard-content-form">
-        <h2>Gerenciar Contatos</h2>
-        <div>
-            <h3 ng-show="status == 'criando'">Criar - Novo Contato</h3>
-            <h3 ng-show="status == 'editando'">Editar - Contato #{{informacoesDosContatos.id}}</h3>
-        </div>
+<div class="content">
+    <div class="dashboard-content">
+        <h3 class="sub-paginas-titulos">Agenda com API</h3>
 
-        
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" ng-model="informacoesDosContatos.nome" placeholder="Nome">
+        <div class="dashboard-content-form">
+            <div>
+                <h2>Gerenciar Contatos</h2>
+                <div>
+                    <h3 ng-show="status == 'criando'">Criar - Novo Contato</h3>
+                    <h3 ng-show="status == 'editando'">Editar - Contato #{{informacoesDosContatos.id}}</h3>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" ng-model="informacoesDosContatos.email" placeholder="exemplo@exemplo.com">
-            </div>
-            <div class="form-group">
-                <label for="telefoneCelular">Telefone Celular</label>
-                <input type="text" ng-model="informacoesDosContatos.telefoneCelular" placeholder="XXXXXXXXXXX">
-            </div>
-            <div class="form-group">
-                <label for="telefoneFixo">Telefone Fixo</label>
-                <input type="text" ng-model="informacoesDosContatos.telefoneFixo" placeholder="XXXXXXXXXX">
-            </div>
-            <div class="form-group">
-                <label for="endereco">Endereço</label>
-                <input type="text" ng-model="informacoesDosContatos.endereco" placeholder="Rua Exemplo, 000, Exemplês, EX">
-            </div>
+    
             
-            <div class="form-buttons">
-                <input type="button" value="Adicionar" ng-show="status == 'criando'"  ng-click="cadastrarContato()">
-                <input type="button" value="Editar" ng-show="status == 'editando'" ng-click="editarSalvar()">
+            <form class="dashboard-content-form-contact">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" ng-model="informacoesDosContatos.nome" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" ng-model="informacoesDosContatos.email" placeholder="exemplo@exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="telefoneCelular">Telefone Celular</label>
+                    <input type="text" ng-model="informacoesDosContatos.telefoneCelular" placeholder="XXXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label for="telefoneFixo">Telefone Fixo</label>
+                    <input type="text" ng-model="informacoesDosContatos.telefoneFixo" placeholder="XXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" ng-model="informacoesDosContatos.endereco" placeholder="Rua Exemplo, 000, Exemplês, EX">
+                </div>
+                
+                <div class="form-buttons">
+                    <input type="button" value="Adicionar" ng-show="status == 'criando'"  ng-click="cadastrarContato()">
+                    <input type="button" value="Editar" ng-show="status == 'editando'" ng-click="editarSalvar()">
+                </div>
+    
+                <input type="button" value="Cancelar" id="btnCancelar" ng-click="resetar()">
+            </form>
+    
+            <div class="contact-list">
+                <h3>Contatos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Celular</th>
+                            <th>Telefone Fixo</th>
+                            <th>Endereço</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+    
+                    <!-- ng-repeat irá imprimir os itens do array contatos -->
+                    <tbody ng-repeat="item in contatos">
+                        <!-- Os contatos serão listados aqui -->
+                        <tr>
+                            <td>{{item.nome}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.telefoneCelular}}</td>
+                            <td>{{item.telefoneFixo}}</td>
+                            <td>{{item.endereco}}</td>
+                            <td>
+                                <input type="button" value="Editar" ng-click="editarContato(item.id)">
+                                <input type="button" value="Excluir" ng-click="$parent.deleletarContato(item.id)">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody ng-show="contatos.length == 0">
+                        <tr>
+                            <td colspan="6">
+                                Não existem contatos cadastrados.
+                            </td>
+                        </tr>
+    
+                    </tbody>
+                </table>
             </div>
 
-            <input type="button" value="Cancelar" id="btnCancelar" ng-click="resetar()">
-        </form>
-
-        <div class="contact-list">
-            <h3>Contatos</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Celular</th>
-                        <th>Telefone Fixo</th>
-                        <th>Endereço</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-
-                <!-- ng-repeat irá imprimir os itens do array contatos -->
-                <tbody ng-repeat="item in contatos">
-                    <!-- Os contatos serão listados aqui -->
-                    <tr>
-                        <td>{{item.nome}}</td>
-                        <td>{{item.email}}</td>
-                        <td>{{item.telefoneCelular}}</td>
-                        <td>{{item.telefoneFixo}}</td>
-                        <td>{{item.endereco}}</td>
-                        <td>
-                            <input type="button" value="Editar" ng-click="editarContato(item.id)">
-                            <input type="button" value="Excluir" ng-click="$parent.deleletarContato(item.id)">
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody ng-show="contatos.length == 0">
-                    <tr>
-                        <td colspan="6">
-                            Não existem contatos cadastrados.
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
         </div>
+
     </div>
 </div>

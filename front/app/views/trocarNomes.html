@@ -1,17 +1,22 @@
-
-
 <div class="content">
-    <div class="main-content">
-        <p>{{informacoes}}</p>
-        <p>Nome: {{informacoesComMaisDados.nome}}</p>
-        <p>Sobrenome: {{informacoesComMaisDados.sobrenome}}</p>
-        <p>Sobrenome e Nome: {{informacoesComMaisDados.sobrenome + ' ' + informacoesComMaisDados.nome}}</p>
+    <div class="dashboard-content">
+        <h3 class="sub-paginas-titulos">Trocar Nomes</h3>
+        
+        <div class="dashboard-content-grupos-paragrafos">
+            
+            <p>{{informacoes}}</p>
 
-        <!-- Botão para chamar a função que troca de nome -->
-        <input type="button" value="Trocar sobrenome" ng-click="trocarNome()">
+            <p>Nome: {{informacoesComMaisDados.nome}}</p>
+            <p>Sobrenome: {{informacoesComMaisDados.sobrenome}}</p>
+            <p>Sobrenome e Nome: {{informacoesComMaisDados.sobrenome + ' ' + informacoesComMaisDados.nome}}</p>
+    
+            <!-- Botão para chamar a função que troca de nome -->
+            <input type="button" value="Trocar sobrenome" ng-click="trocarNome()">
+        </div>
 
-        <p>Sobrenome atualizado: {{informacoesComMaisDados.sobrenome}}</p>
-
+        <div class="resultado">
+            <p>Sobrenome atualizado: {{informacoesComMaisDados.sobrenome}}</p>
+        </div>
     </div>
 </div>
 

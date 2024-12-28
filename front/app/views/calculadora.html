@@ -1,23 +1,25 @@
-
-
 <div class="content">
-    <div class="main-content">
+    <div class="dashboard-content">
         <h3 class="sub-paginas-titulos">Calculadora</h3>
 
-        <div>
-            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
-            <input type="number" ng-model="valores.primeiroNumero"><br><br> 
-            <input type="number" ng-model="valores.segundoNumero"><br><br> 
+        <div class="dashboard-content-form">
+            <div>
+                <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+                <input type="number"  ng-model="valores.primeiroNumero"><br><br> 
+                <input type="number"  ng-model="valores.segundoNumero"><br><br> 
+            </div>
+    
+            <div >
+                <input type="button" value="Somar" ng-click="somar()"> 
+                <input type="button" value="Subtrair" ng-click="subtrair()"> 
+                <input type="button" value="Multiplicar" ng-click="multiplicar()"> 
+                <input type="button" value="Dividir" ng-click="dividir()"> 
+                <input type="button" value="Limpar" ng-click="limpar()" style="background-color: red; color: antiquewhite;">   
+            </div>
+    
+            <div class="resultado">
+                <p>Resultado: {{valores.resultado}}</p>
+            </div>
         </div>
-
-        <input type="button" value="Somar" ng-click="somar()"> 
-        <input type="button" value="Subtrair" ng-click="subtrair()"> 
-        <input type="button" value="Multiplicar" ng-click="multiplicar()"> 
-        <input type="button" value="Dividir" ng-click="dividir()"> 
-        <input type="button" value="CarcularTudo" ng-click="carcularTudo()"> 
-        <input type="button" value="Limpar" ng-click="limpar()" style="background-color: red; color: antiquewhite;"> 
-
-        <p>Resultado: {{valores.resultado}}</p>
-
     </div>
 </div>

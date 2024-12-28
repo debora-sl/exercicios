@@ -1,15 +1,20 @@
 <div class="content">
-    <div class="main-content">
+    <div class="dashboard-content">
         <h3 class="sub-paginas-titulos">Palindromo</h3>
 
-        <div>
-            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
-             <p>Escreva a palavra</p>
-             <input type="text" ng-model="informacoes.palavraInformada"><br><br>
+        <div class="dashboard-content-form">
+            <div>
+                <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+                 <p>Escreva a palavra</p>
+                 <input type="text" ng-model="informacoes.palavraInformada"><br><br>
+            </div>
 
+            <div>
+                <input type="button" value="Verificar Palavra" ng-click="verificarPalavra()"> <br><br>
+            </div>
+    
+            <div class="resultado">
+                <p>{{informacoes.resultado}}</p>
+            </div>
         </div>
-
-        <input type="button" value="Verificar Palavra" ng-click="verificarPalavra()"> <br><br>
-
-        <p>{{informacoes.resultado}}</p>
 </div>

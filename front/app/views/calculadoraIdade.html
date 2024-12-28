@@ -1,33 +1,36 @@
 <div class="content">
-    <div class="main-content">
+    <div class="dashboard-content">
         <h3 class="sub-paginas-titulos">Calculadora de Idade</h3>
 
-        <div>
-            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
-             <p>Nome:</p>
-             <input type="text" ng-model="informacoes.nome"><br><br>
-             <p>Data de Nascimento:</p>
-            <input type="date" ng-model="informacoes.dataDeNascimento"><br><br>
+        <div class="dashboard-content-form">
+            <div>
+                <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+                 <p>Nome:</p>
+                 <input type="text" ng-model="informacoes.nome"><br><br>
+                 <p>Data de Nascimento:</p>
+                <input type="date" ng-model="informacoes.dataDeNascimento"><br><br>
+            </div>
+    
+            <div>
+                <input type="button" value="Calcular Idade" ng-click="calcularIdade()"> <br>
+            </div>
+    
+           <!-- <p>{{pessoas}}</p> -->
+            <br>
+            <table border="1">
+                <thead>
+                    <th>Nome</th>
+                    <th>Nascimento</th>
+                    <th>Idade Calculada</th>
+                </thead>
+                <tbody ng-repeat="item in pessoas">
+                    <tr>
+                        <td>{{item.nome}}</td>
+                        <td>{{item.dataDeNascimento | date:'dd/MM/yyyy'}}</td>  <!-- | date:'' formatando a data, tbm tem currency p/ moedas -->
+                        <td>{{item.idadeCalculada}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <input type="button" value="Calcular Idade" ng-click="calcularIdade()"> <br>
-
-       <!-- <p>{{pessoas}}</p> -->
-
-        <br>
-        <table border="1">
-            <thead>
-                <th>Nome</th>
-                <th>Nascimento</th>
-                <th>Idade Calculada</th>
-            </thead>
-            <tbody ng-repeat="item in pessoas">
-                <tr>
-                    <td>{{item.nome}}</td>
-                    <td>{{item.dataDeNascimento | date:'dd/MM/yyyy'}}</td>  <!-- | date:'' formatando a data, tbm tem currency p/ moedas -->
-                    <td>{{item.idadeCalculada}}</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </div>

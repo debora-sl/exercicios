@@ -11,9 +11,9 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/partials/comHeaderMenuEFooter.html', // Template com header, sidebar e footer
         })
         .state('main.home', {
-            url: '/',
+            url: '/home',
             templateUrl: 'app/views/home.html', // Template da dashboard
-            controller: 'testeController' // Controller para a dashboard
+            controller: 'HomeController' // Controller para a dashboard
         })
         .state('main.trocarNomes', {
             url: '/trocarNomes',

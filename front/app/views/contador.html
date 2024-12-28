@@ -1,17 +1,23 @@
 <div class="content">
-    <div class="main-content">
+    <div class="dashboard-content">
         <h3 class="sub-paginas-titulos">Contador</h3>
 
-        <div>
-            <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
-             <p>De:</p>
-            <input type="number" ng-model="numerosDeAte.numeroDe"><br><br>
-            <p>Ate:</p>
-            <input type="number" ng-model="numerosDeAte.numeroAte"><br><br> 
+        <div class="dashboard-content-form">
+            <div>
+                <!-- ng-model='' você atribui a variavel, neste caso colocamos valores (objeto)-->
+                 <p>De:</p>
+                <input type="number" ng-model="numerosDeAte.numeroDe"><br><br>
+                <p>Ate:</p>
+                <input type="number" ng-model="numerosDeAte.numeroAte"><br><br> 
+            </div>
+
+            <div>
+                <input type="button" value="Contar" ng-click="contar()"> 
+            </div>
+
+            <div class="resultado">
+                <p>Contando: {{numerosContados}}</p>
+            </div>
         </div>
-
-        <input type="button" value="Contar" ng-click="contar()"> 
-
-        <p>Contando: {{numerosContados}}</p>
     </div>
 </div>
