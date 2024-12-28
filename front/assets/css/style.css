@@ -13,12 +13,14 @@ body {
 
 /* Header */
 .header {
+    border: thin solid red;
     background-color: #333;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+
 }
 
 .header h1 {
@@ -57,15 +59,19 @@ body {
 
 /* Main Container */
 .main-container {
+    border: thin solid yellow;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
-    /* border: thin solid red; */
     margin-left: 120px;
+
 }
 
 /* Titulos das subpáginas */
 .sub-paginas-titulos{
     margin-left: 400px;
+
 }
 
 /* Sidebar Menu */
