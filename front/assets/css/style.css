@@ -175,7 +175,7 @@ body {
     margin-top: 20px;
     margin-bottom: 1px;
     height: auto; /* Altura ajustável conforme o conteúdo */
-    border: thin solid red;
+
 }
 
 .dashboard-content-form-contact .form-group {
@@ -198,11 +198,6 @@ body {
     font-size: 14px;
 }
 
-.form-buttons{
-    border: thin solid red;
-    display: flex;
-    flex-direction: row;
-}
 
 .dashboard-content-grupos-paragrafos{
     display: flex;
@@ -219,9 +214,6 @@ body {
     font-size: 26px;
 }
 
-
-
-
 input[type="number"] {
     width: 80%;
     padding: 10px;
@@ -231,7 +223,29 @@ input[type="number"] {
     font-size: 16px;
 }
 
-input[type="button"] {
+.btnCancelar{
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnOk{
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* input[type="button"] {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -244,7 +258,68 @@ input[type="button"] {
 
 input[type="button"]:hover {
     background-color: #218838;
+} */
+
+/* Lista de Contatos */
+.contact-list {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
+
+.contact-list-title{
+    margin-left: 18em;
+}
+
+.contact-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-list thead {
+    background-color: #8ff1a6;
+    color: rgb(70, 67, 67);
+}
+
+.contact-list th, 
+.contact-list td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-list th {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.contact-list tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.contact-list tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.contact-list td {
+    font-size: 14px;
+}
+
+/* Mensagem de ausência de contatos */
+.contact-list tbody td[colspan="6"] {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 30px 0;
+}
+
+
 
 .resultado {
     margin-top: 20px;

@@ -38,22 +38,22 @@
                 </div>
                 
                 <div class="form-buttons">
-                    <input type="button" value="Adicionar" ng-show="status == 'criando'"  ng-click="cadastrarContato()">
-                    <input type="button" value="Editar" ng-show="status == 'editando'" ng-click="editarSalvar()">
+                    <input type="button" value="Adicionar" class="btnOk" ng-show="status == 'criando'"  ng-click="cadastrarContato()">
+                    <input type="button" value="Salvar" class="btnOk" ng-show="status == 'editando'" ng-click="editarSalvar()">
+                    <input type="button" value="Cancelar" class="btnCancelar" ng-click="resetar()" >
                 </div>
     
-                <input type="button" value="Cancelar" id="btnCancelar" ng-click="resetar()">
             </form>
     
             <div class="contact-list">
-                <h3>Contatos</h3>
+                <h3 class="contact-list-title">Contatos Salvos</h3>
                 <table>
                     <thead>
                         <tr>
                             <th>Nome</th>
                             <th>E-mail</th>
                             <th>Celular</th>
-                            <th>Telefone Fixo</th>
+                            <th>Tel Fixo</th>
                             <th>Endereço</th>
                             <th>Ações</th>
                         </tr>
@@ -69,8 +69,8 @@
                             <td>{{item.telefoneFixo}}</td>
                             <td>{{item.endereco}}</td>
                             <td>
-                                <input type="button" value="Editar" ng-click="editarContato(item.id)">
-                                <input type="button" value="Excluir" ng-click="$parent.deleletarContato(item.id)">
+                                <input type="button" value="Editar" ng-click="editarContato(item.id)" class="btnOk">
+                                <input type="button" value="Excluir" ng-click="$parent.deleletarContato(item.id)" class="btnCancelar">
                             </td>
                         </tr>
                     </tbody>
