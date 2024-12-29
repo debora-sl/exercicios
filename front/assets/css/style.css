@@ -86,7 +86,7 @@ body {
 /* Titulos das subpáginas */
 .sub-paginas-titulos{
     text-align: center;
-    margin-bottom: -25px;
+    margin-bottom: -10px;
 }
 
 /* Sidebar Menu */
@@ -223,7 +223,7 @@ input[type="number"] {
     font-size: 16px;
 }
 
-.btnCancelar{
+#btnCancelar{
     padding: 7px 15px;
     border: none;
     border-radius: 5px;
@@ -234,7 +234,7 @@ input[type="number"] {
     transition: background-color 0.3s;
 }
 
-.btnOk{
+#btnOk{
     padding: 7px 15px;
     border: none;
     border-radius: 5px;
@@ -245,7 +245,7 @@ input[type="number"] {
     transition: background-color 0.3s;
 }
 
-/* input[type="button"] {
+input[type="button"] {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -258,7 +258,7 @@ input[type="number"] {
 
 input[type="button"]:hover {
     background-color: #218838;
-} */
+}
 
 /* Lista de Contatos */
 .contact-list {
