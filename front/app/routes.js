@@ -70,6 +70,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exerciciosComApi/agenda.html', // Template da agenda
             controller: 'AgendaController' // Controller para agenda
         })
+        .state('main.pj', {
+            url: '/pj',
+            templateUrl: 'app/views/exerciciosComApi/pj.html', // Template da agenda
+            controller: 'PJController' // Controller para agenda
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',

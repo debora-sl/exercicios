@@ -1,0 +1,71 @@
+
+<div class="content">
+    <div class="dashboard-content">
+        <div class="dashboard-content">
+            <h3 class="sub-paginas-titulos">Cadastros de PJ</h3>
+            <div>
+                <h3 ng-show="status == 'criando'">Criar - Novo Cadastro</h3>
+                <h3 ng-show="status == 'editando'">Editar - cadastro</h3>
+            </div>
+
+            <!-- form.html -->
+            <form class="dashboard-content-form-contact">
+                <div class="form-group">
+                    <label for="nome">Razão Social</label>
+                    <input type="text" id="razao_social"  placeholder="Razão Social">
+                </div>
+
+                <div class="form-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="email" id="cnpj"  placeholder="XX.XXX.XXX/XXXX-XX">
+                </div>
+
+                <div class="form-buttons">
+                    <input type="button" value="Adicionar" id="btnOk">
+                    <input type="button" value="Salvar" id="btnOk">
+                    <input type="button" value="Cancelar" id="btnCancelar">
+                </div>
+            </form>
+
+            <div class="contact-list">
+                    <h3 class="contact-list-title">Clientes Cadastrados</h3>
+
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Razão Social</th>
+                                <th>CNPJ</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                    <!-- ng-repeat irá imprimir os itens do array contatos -->
+                    <tbody >
+                        <!-- Os contatos serão listados aqui -->
+                        <tr>
+                            <td>TESTE S.A LTDA</td>
+                            <td>000000000000</td>
+                            <td>
+                                <input type="button" value="Editar" id="btnOk" class="btnOk">
+                                <input type="button" value="Excluir" id="btnCancelar" class="btnCancelar">
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <!-- <tbody >
+                        <tr>
+                            <td colspan="6">
+                                Não existem contatos cadastrados.
+                            </td>
+                        </tr>
+                    </tbody> -->
+                    </table>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
