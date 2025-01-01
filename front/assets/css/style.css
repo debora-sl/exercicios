@@ -146,7 +146,7 @@ body {
 .dashboard-content {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 300px; /* Espaço para a sidebar */
+    margin-left: 200px; /* Espaço para a sidebar */
     background-color: white;
     height: auto; /* Altura ajustável conforme o conteúdo */
 }

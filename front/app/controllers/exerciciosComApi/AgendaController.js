@@ -102,7 +102,7 @@ angular.module('meuApp')
             }) 
     }
 
-        // criando a função que aditaSalvar o contato
+        // criando a função que editaSalvar o contato
         $scope.editarSalvar = function(){
             console.log('Botão editarSalvar, fui clicado!!!');
     
@@ -189,6 +189,6 @@ angular.module('meuApp')
                     console.log(error);   
                 })
             }
-          })
+        })
     };
 });

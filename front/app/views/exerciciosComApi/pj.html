@@ -5,25 +5,25 @@
             <h3 class="sub-paginas-titulos">Cadastros de PJ</h3>
             <div>
                 <h3 ng-show="status == 'criando'">Criar - Novo Cadastro</h3>
-                <h3 ng-show="status == 'editando'">Editar - cadastro</h3>
+                <h3 ng-show="status == 'editando'">Editar - cadastro {{informacoesdasPJs.razaoSocial}}</h3>
             </div>
 
             <!-- form.html -->
             <form class="dashboard-content-form-contact">
                 <div class="form-group">
                     <label for="nome">Razão Social</label>
-                    <input type="text" id="razao_social"  placeholder="Razão Social">
+                    <input type="text" id="razao_social" ng-model="informacoesdasPJs.razaoSocial" placeholder="Razão Social" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="cnpj">CNPJ</label>
-                    <input type="email" id="cnpj"  placeholder="XX.XXX.XXX/XXXX-XX">
+                    <label for="text">CNPJ</label>
+                    <input type="text" id="cnpj" ng-model="informacoesdasPJs.cnpj" placeholder="XX.XXX.XXX/XXXX-XX" required>
                 </div>
 
                 <div class="form-buttons">
-                    <input type="button" value="Adicionar" id="btnOk">
-                    <input type="button" value="Salvar" id="btnOk">
-                    <input type="button" value="Cancelar" id="btnCancelar">
+                    <input type="button" value="Adicionar" id="btnOk" ng-show="status == 'criando'" ng-click="cadastrarPJ()">
+                    <input type="button" value="Salvar" id="btnOk" ng-show="status == 'editando'" ng-click="editarSalvar()">
+                    <input type="button" value="Cancelar" id="btnCancelar" ng-click="resetar()">
                 </div>
             </form>
 
@@ -40,32 +40,30 @@
                             </tr>
                         </thead>
 
-                    <!-- ng-repeat irá imprimir os itens do array contatos -->
-                    <tbody >
+                    <!-- ng-repeat irá imprimir os itens do array pjs -->
+                    <tbody ng-repeat="item in pjCadastradas">
                         <!-- Os contatos serão listados aqui -->
                         <tr>
-                            <td>TESTE S.A LTDA</td>
-                            <td>000000000000</td>
+                            <td>{{item.razaoSocial}}</td>
+                            <td>{{item.cnpj}}</td>
                             <td>
-                                <input type="button" value="Editar" id="btnOk" class="btnOk">
-                                <input type="button" value="Excluir" id="btnCancelar" class="btnCancelar">
+                                <input type="button" value="Editar" id="btnOk" class="btnOk" ng-click="editarPJ(item.id)">
+                                <input type="button" ng-click="deletarPJ(item.id)" value="Excluir" id="btnCancelar" class="btnCancelar">
                             </td>
                         </tr>
                     </tbody>
 
-                    <!-- <tbody >
+                    <tbody ng-show="pjCadastradas.length == 0">
                         <tr>
                             <td colspan="6">
-                                Não existem contatos cadastrados.
+                                Não existem clientes cadastrados.
                             </td>
                         </tr>
-                    </tbody> -->
+                    </tbody>
                     </table>
 
                 </div>
             </div>
-
-
         </div>
     </div>
 </div>
