@@ -75,6 +75,12 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exerciciosComApi/pj.html', // Template da agenda
             controller: 'PJController' // Controller para agenda
         })
+        // se não coloar o main, não aparece o sidebar
+        .state('login', {
+            url: '/login',
+            templateUrl: 'app/views/exerciciosComApi/login.html', // Template da agenda
+            controller: 'LoginController' // Controller para agenda
+        })
 
        /* .state('main.dashboard', {
             url: '/dashboard',

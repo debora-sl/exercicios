@@ -1,0 +1,41 @@
+
+
+<div class="content-login" ng-show="estaLogado == false">
+    <h3 class="titulo-login">Exercicio de Login</h3>
+    <div class="dashboard-content-login">
+        <div>
+            <div>
+                <h3 class="titulo-login-formulario">Login</h3>
+            </div>
+
+            <!-- form.html -->
+             <form action="post" class="dashboard-content-login-form">
+                <div class="form-group-login">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" ng-model="login.email" placeholder="example@provedor.com.br">
+                </div>
+
+                <div class="form-group-login">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" ng-model="login.password" placeholder="******">
+                </div>
+
+                <div class="form-group-login">
+                    <button type="button" id="form-group-login-btnOk" ng-click="logar()">Entrar</button>
+                        <p class="form-group-login-paragrafo"> Não tem cadastro?</p> <a href="#" class="form-group-login-link">Registre-se</a>
+                </div>
+             </form>            
+        </div>
+    </div>
+</div>
+
+<div class="content-logado" ng-show="estaLogado == true">
+    <div class="content-logado-titulo">
+        <h3 class="titulo-login-formulario">Você está logado,<br> olá {{dadosDoUsuario.name}}</h3>
+    </div>
+
+    <div>
+        <button type="button" id="form-group-login-btnOk" ng-click="deslogar()">Deslogar</button>
+    </div>
+    
+</div>

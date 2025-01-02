@@ -15,59 +15,106 @@ body {
     height: 100vh;
 }
 
-/* Header */
-.header {
-    background-color: #333;
-    color: white;
+.titulo-login{
+    text-align: center;
+    margin-bottom: 1em;
+    margin-left: 6em;
+}
+
+/* content */
+.content-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 40em;
+    height: 25em;
+
+    margin-bottom: 10em;
+    margin-left: 5em;
+}
+
+.dashboard-content-login{
+    width: 37em;
+    height: 23em;
+}
+
+.titulo-login-formulario{
+    margin-left: 14em;
+}
+
+/* formulário */
+.dashboard-content-login-form{
+    padding: 20px;
+    
+    width: 35em;
+    height: 20em;
+    
+    max-width: 800px;
+    background-color: #f9f9f9;
+
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 1em 1em 1em 2em;
+}
+
+.dashboard-content-login-form .form-group-login {
     width: 100%;
-    text-align: center;
-    padding: 15px;
+    height: 3em;
+    padding: 0.5em;
+    margin-bottom: 15px;
 }
 
-/* Container de Login */
-.login-container {
-    background-color: white;
-    padding: 40px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.login-container h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.login-container label {
+.dashboard-content-login-form label {
     display: block;
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 8px;
-    text-align: left;
+    margin-bottom: 3px;
+    font-weight: bold;
 }
 
-.login-container input[type="text"],
-.login-container input[type="password"] {
+.dashboard-content-login-form input[type="email"],
+.dashboard-content-login-form input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    height: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
-.login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+#form-group-login-btnOk{
+    padding: 7px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 1em;
 }
 
-.login-btn:hover {
-    background-color: #555;
+.form-group-login-paragrafo{
+    font-size: medium;
+    margin-top: 15px;
+}
+
+.form-group-login-link{
+    text-decoration: none;
+    font-size: medium;
+    color: #480ee9;
+}
+
+.content-logado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 1em;
+}
+
+.content-logado-titulo{
+    text-align: center;
+    margin-right: 15em;
+    margin-bottom: 1em;
 }
