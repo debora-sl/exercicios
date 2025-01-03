@@ -1,6 +1,6 @@
 // $scope é para comunicação entre JS e HTML
 angular.module('meuApp')
-.controller('LoginController', function($scope, $http) {
+.controller('LoginController', function($scope, $http, $state) {
     console.log("LoginController funcionando!");
     
     // criando o objeto com e-mail e senha
@@ -18,9 +18,8 @@ angular.module('meuApp')
     // para apaecer o formulário de login, para o usuario fornecer os dados
     $scope.estaLogado=false;
 
-
     // função que verifica quem está logado (me)
-    verificarMe =  function(){
+    verificarMe =  function(redirecionar){
         $url = 'http://localhost:8000/api/usuarios/me';
 
     // pedindo para ler o token
@@ -40,16 +39,20 @@ angular.module('meuApp')
         $http.get($url, $config).then(function(response){
             console.log(response);
             if(response.status == 200){
+                //trazendo o name do bd para ser exibido no cabeçalho
+                localStorage.setItem('usuario', JSON.stringify(response.data));
                 // trazendo os dados do bd
                 $scope.dadosDoUsuario = response.data;
-                $scope.estaLogado = true;
+                if (redirecionar == true) {
+                    $state.go('main.home')
+                }
             }
         }, function(error){
             console.log(error);
         });
     };
 
-    verificarMe();
+    verificarMe(false);
     
     // criando a função para logar
     $scope.logar = function(){
@@ -59,13 +62,11 @@ angular.module('meuApp')
             // salvando na máquina do usuário
             if(response.status == 200){
                 localStorage.setItem('token', response.data.token);
-                verificarMe();
-                $scope.estaLogado = true;
+                verificarMe(true);
             }
             console.log('Usuário logado com sucesso!', response);
         }, function(error){
-            console.log("Ops, deu erro: ", error);
-            
+            console.log("Ops, deu erro: ", error); 
         });
     }
 
@@ -83,8 +84,10 @@ angular.module('meuApp')
         
         $http.get($url, $config).then(function(response){
             if(response.status == 200){
-                // matando o token do no localStorage
+                // matando o token e usuario do no localStorage
                 localStorage.removeItem('token');
+                localStorage.removeItem('usuario');
+
                 $scope.estaLogado = false;
                 // zarando os dados do usuário
                 $scope.dadosDoUsuario = {
