@@ -9,11 +9,17 @@ angular.module('meuApp', ['ui.router'])
         .state('main', {
             abstract: true,
             templateUrl: 'app/views/partials/comHeaderMenuEFooter.html', // Template com header, sidebar e footer
+            controller: 'HomeController' // Controller para a dashboard que seja exibido o nome do usuário
         })
         .state('main.home', {
-            url: '/home',
+            url: '/',
             templateUrl: 'app/views/home.html', // Template da dashboard
             controller: 'HomeController' // Controller para a dashboard
+        })
+        .state('deslogar', {
+            url: '/deslogar',
+            templateUrl: 'app/views/exerciciosComApi/deslogar.html', // Template da dashboard
+            controller: 'DeslogarController' // Controller para a dashboard
         })
         .state('main.trocarNomes', {
             url: '/trocarNomes',
@@ -81,12 +87,11 @@ angular.module('meuApp', ['ui.router'])
             templateUrl: 'app/views/exerciciosComApi/login.html', // Template da agenda
             controller: 'LoginController' // Controller para agenda
         })
+        .state('registrese', {
+            url: '/registrese',
+            templateUrl: 'app/views/exerciciosComApi/registrese.html', // Template da agenda
+            controller: 'RegistreSeController' // Controller para agenda
+        })
 
-       /* .state('main.dashboard', {
-            url: '/dashboard',
-            templateUrl: 'app/partials/dashboard.html', // Template da dashboard
-            controller: 'DashboardController' // Controller para a dashboard
-        }) */ 
-       
 
 });

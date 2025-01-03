@@ -1,0 +1,39 @@
+
+<div class="content-login" >
+    <h3 class="titulo-login">Exercicio de Cadastro</h3>
+    <div class="dashboard-content-login">
+        <div>
+            <div>
+                <h3 class="titulo-login-formulario">Cadastro</h3>
+            </div>
+
+            <!-- form.html -->
+             <form action="post" class="dashboard-content-login-form">
+                <div class="form-group-login">
+                    <label for="name">Nome</label>
+                    <input type="name" name="name" id="nameCadastro" ng-model="informacoes.name" placeholder="Fulano de Tal">
+                </div>
+
+                <div class="form-group-login">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="emailCadastro" ng-model="informacoes.email"  placeholder="example@provedor.com.br">
+                </div>
+
+                <div class="form-group-login">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="passwordCadastro" ng-model="informacoes.password" placeholder="******">
+                </div>
+
+                <div class="form-group-login">
+                    <label for="password">Confirmação de senha</label>
+                    <input type="password" name="password" id="passwordCadastroConfirm" ng-model="informacoes.passwordConfirme" placeholder="******">
+                </div>
+
+                <div class="form-group-login">
+                    <button type="button" id="form-group-login-btnOk" ng-click="registrar()">Cadastrar</button>
+                        <p class="form-group-login-paragrafo"> Já tem cadastro? <a ui-sref="login" class="form-group-login-link">Faça o login</a></p>
+                </div>
+             </form>            
+        </div>
+    </div>
+</div>
